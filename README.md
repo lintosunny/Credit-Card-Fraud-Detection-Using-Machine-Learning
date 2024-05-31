@@ -37,7 +37,7 @@ flowchart LR
     _Grafana, Prometheus_`"]
     J --> K["`Visualization
     _Power BI_`"]
-
+```
 ## High-Level Design (HLD)
 
 ### API Gateway
