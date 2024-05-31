@@ -15,7 +15,7 @@
 
 ## Process
 ```mermaid
-flowchart TD
+flowchart LR
     A[(Transactions)] --> B[[model]]
     B --> C{Fraud Score}
     C -- fraud --> D[Analyst]
