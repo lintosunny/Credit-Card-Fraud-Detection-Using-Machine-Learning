@@ -1,5 +1,16 @@
 # Fraud Detection Using Machine Learning
 
+## Process
+```mermaid
+flowchart LR
+    A[(Transactions)] --> B[[model]]
+    B --> C{Fraud Score}
+    C -- >= threshold --> D[Analyst]
+    C -- < threshold --> E[End]
+    D -- check --> F((Feedback))
+    F --> B
+```
+
 ## Architecture Overview ## High-Level Design (HLD)
 1. **API Gateway**: Entry point for all client requests.
 2. **Data Ingestion Service**: Handles data ingestion using Kafka.
@@ -13,16 +24,7 @@
 10. **Monitoring and Logging Service**: Monitors the system using Grafana and Prometheus.
 11. **Visualization Service**: Uses Power BI for visualization of results and insights.
 
-## Process
-```mermaid
-flowchart LR
-    A[(Transactions)] --> B[[model]]
-    B --> C{Fraud Score}
-    C -- >= threshold --> D[Analyst]
-    C -- < threshold --> E[End]
-    D -- check --> F((Feedback))
-    F --> B
-```
+
 
 ## Architecture Diagram
 ```mermaid
