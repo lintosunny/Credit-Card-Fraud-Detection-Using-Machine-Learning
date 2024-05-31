@@ -26,7 +26,7 @@ flowchart TD
     D --> E["`EDA
     _Jupyter lab_`"]
     D --> F["`Model Training
-    _AutoML_`"]
+    _Scikit-Learn_`"]
     F --> G["`Model Evaluation
     _Custom Scripts_`"]
     G --> H["`Model Registry
