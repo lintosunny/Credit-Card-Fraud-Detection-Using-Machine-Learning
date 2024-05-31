@@ -20,7 +20,7 @@ flowchart TD
     _MongoDB_`"] --> B["`Data Ingestion
     _Kafka_`"]
     B --> C["`Data Storage
-    _Azure blob / mongoDB Atlas_`"]
+    _Azure blob_`"]
     C --> D["`Data Processing
     _pyspark_`"]
     D --> E["`EDA
