@@ -1,7 +1,7 @@
 # Fraud-Detection-Using-Machine-Learning
 
 ```mermaid
-flowchart TD
+flowchart LR
     A["`API Gateway
     _Azure API Gateway_`"] --> B["`Data Ingestion
     _Kafka_`"]
