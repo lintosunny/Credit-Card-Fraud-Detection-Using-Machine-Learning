@@ -1,6 +1,6 @@
 # Fraud Detection Using Machine Learning
 
-## Architecture Overview
+## Architecture Overview ## High-Level Design (HLD)
 1. **API Gateway**: Entry point for all client requests.
 2. **Data Ingestion Service**: Handles data ingestion using Kafka.
 3. **Data Storage**: Stores raw data in a data lake (e.g., HDFS or S3).
@@ -15,7 +15,7 @@
 
 ## Architecture Diagram
 ```mermaid
-flowchart LR
+flowchart TD
     A["`API Gateway
     _Azure API Gateway_`"] --> B["`Data Ingestion
     _Kafka_`"]
@@ -38,62 +38,8 @@ flowchart LR
     J --> K["`Visualization
     _Power BI_`"]
 ```
-## High-Level Design (HLD)
 
-### API Gateway
 
-- **Responsibilities**: Routing, authentication, rate limiting.
-- **Technologies**: Kong, NGINX, or AWS API Gateway.
-
-### Data Ingestion Service
-
-- **Responsibilities**: Collects and streams data to the data lake.
-- **Technologies**: Apache Kafka.
-
-### Data Storage
-
-- **Responsibilities**: Stores raw and processed data.
-- **Technologies**: HDFS, S3.
-
-### Data Processing Service
-
-- **Responsibilities**: Preprocesses data, handles feature engineering.
-- **Technologies**: PySpark, Redis/Apache Ignite for in-memory processing.
-
-### EDA Service
-
-- **Responsibilities**: Provides interactive analysis of data.
-- **Technologies**: Jupyter Notebook.
-
-### Model Training Service
-
-- **Responsibilities**: Automates model selection, training, and hyperparameter tuning using AutoML.
-- **Technologies**: H2O.ai, Google AutoML, AutoKeras.
-
-### Model Evaluation Service
-
-- **Responsibilities**: Evaluates model performance.
-- **Technologies**: Custom scripts, Scikit-learn metrics.
-
-### Model Registry Service
-
-- **Responsibilities**: Tracks and manages model versions.
-- **Technologies**: MLflow.
-
-### Model Deployment Service
-
-- **Responsibilities**: Deploys models as microservices.
-- **Technologies**: Docker, BentoML/FastAPI, CircleCI, Azure.
-
-### Monitoring and Logging Service
-
-- **Responsibilities**: Monitors system health, logs metrics.
-- **Technologies**: Grafana, Prometheus.
-
-### Visualization Service
-
-- **Responsibilities**: Creates dashboards and reports.
-- **Technologies**: Power BI.
 
 
 ## Low-Level Design (LLD)
@@ -155,53 +101,8 @@ flowchart LR
 
 
 ## Repository Structure
-```
-Fraud-Detection-Using-Machine-Learning/
-│
-├── data/                           # Data directory
-│   ├── raw/                        # Raw data (e.g., CSV files, logs)
-│   ├── processed/                  # Processed data (after ETL pipelines)
-│   ├── models/                     # Trained models
-│   └── ...
-│
-├── notebooks/                      # Jupyter Notebooks for EDA and analysis
-│   ├── exploratory_analysis.ipynb  # Initial data exploration
-│   ├── data_preprocessing.ipynb    # Data preprocessing steps
-│   └── ...
-│
-├── src/                            # Source code directory
-│   ├── api/                        # API implementation (FastAPI, Flask)
-│   ├── data_processing/            # Data processing scripts (PySpark, Pandas)
-│   ├── model_training/             # Model training scripts (AutoML, Scikit-learn)
-│   ├── model_evaluation/           # Model evaluation scripts
-│   ├── model_deployment/           # Model deployment scripts (Docker, Kubernetes)
-│   ├── utils/                      # Utility functions
-│   └── ...
-│
-├── tests/                          # Unit tests and integration tests
-│   ├── test_data_processing.py     # Tests for data processing
-│   ├── test_model_training.py      # Tests for model training
-│   ├── test_api.py                 # Tests for API endpoints
-│   └── ...
-│
-├── config/                         # Configuration files
-│   ├── config.yaml                 # General configurations
-│   ├── mlflow.yaml                 # MLflow configurations
-│   ├── dockerfile                  # Docker configurations
-│   └── ...
-│
-├── docs/                           # Documentation directory
-│   ├── architecture.md             # System architecture documentation
-│   ├── api_reference.md            # API reference documentation
-│   ├── data_dictionary.md          # Data dictionary
-│   └── ...
-│
-├── requirements.txt                # Python dependencies
-├── README.md                       # Project README file
-├── LICENSE                         # License information
-└── .gitignore                      # Git ignore file
-```
 
+```
 Fraud-Detection-Using-Machine-Learning/
 │
 ├── data/                          
@@ -296,4 +197,4 @@ Fraud-Detection-Using-Machine-Learning/
 ├── README.md                      
 ├── LICENSE                        
 └── .gitignore                     
-
+```
