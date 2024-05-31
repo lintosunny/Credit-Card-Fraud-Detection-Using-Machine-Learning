@@ -13,6 +13,17 @@
 10. **Monitoring and Logging Service**: Monitors the system using Grafana and Prometheus.
 11. **Visualization Service**: Uses Power BI for visualization of results and insights.
 
+## Process
+```mermaid
+flowchart TD
+    A[(Transactions)] --> B[[model]]
+    B --> C{Fraud Score}
+    C -- fraud --> D[Analyst]
+    C -- legit --> E[End]
+    D -- check --> F((Feedback))
+    F --> B
+```
+
 ## Architecture Diagram
 ```mermaid
 flowchart TD
