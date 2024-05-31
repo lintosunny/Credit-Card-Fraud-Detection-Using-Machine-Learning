@@ -18,8 +18,8 @@
 flowchart LR
     A[(Transactions)] --> B[[model]]
     B --> C{Fraud Score}
-    C -- fraud --> D[Analyst]
-    C -- legit --> E[End]
+    C -- >= threshold --> D[Analyst]
+    C -- < threshold --> E[End]
     D -- check --> F((Feedback))
     F --> B
 ```
