@@ -1,5 +1,9 @@
-# Fraud Detection Using Machine Learning
-Alarming statistics reveal a surge in digital fraud! A staggering 4.6% of global transactions in 2023 were flagged as suspicious, with projected losses from payment card fraud expected to hit a whopping $43 billion by 2026 (Source: eMarketer), up from $34 billion in 2022 (Source: Clearly Payments). These figures highlight the critical need for more sophisticated detection methods.
+# Credit Card Fraud Detection Using Machine Learning
+Alarming statistics reveal a surge in digital fraud! 
+<br>
+<br>
+A staggering 4.6% of global transactions in 2023 were flagged as suspicious, with projected losses from payment card fraud expected to hit a whopping $43 billion by 2026 (Source: eMarketer), up from $34 billion in 2022 (Source: Clearly Payments). These figures highlight the critical need for more sophisticated detection methods.
+<br>
 <br>
 This project tackles this challenge head-on by building a machine learning solution that empowers banks and financial institutions to navigate the ever-evolving threat landscape.
 
