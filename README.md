@@ -16,8 +16,7 @@
 ## Architecture Diagram
 ```mermaid
 flowchart TD
-    A["`Database
-    _MongoDB_`"] --> B["`Data Ingestion
+    A[(MongoDB)] --> B["`Data Ingestion
     _Kafka_`"]
     B --> C["`Data Storage
     _Azure blob_`"]
