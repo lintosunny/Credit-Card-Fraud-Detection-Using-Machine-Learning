@@ -1,5 +1,6 @@
 # Fraud-Detection-Using-Machine-Learning
 
+```mermaid
 graph LR
   A[API Gateway (Kong/AWS API Gateway)] --> B[Data Ingestion Service (Kafka, Kafka Streams)]
   B --> C{Data Storage (HDFS/S3, Redshift/BigQuery)}
