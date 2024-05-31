@@ -16,8 +16,8 @@
 ## Architecture Diagram
 ```mermaid
 flowchart TD
-    A["`API Gateway
-    _Azure API Gateway_`"] --> B["`Data Ingestion
+    A["`Database
+    _MongoDB_`"] --> B["`Data Ingestion
     _Kafka_`"]
     B --> C["`Data Storage
     _Azure blob / mongoDB Atlas_`"]
