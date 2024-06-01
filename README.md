@@ -23,8 +23,8 @@ flowchart LR
 
 ## ML model
 ```mermaid
-A[(MongoDB)] --> B[Kafka]
 flowchart LR
+    A[(MongoDB)] --> B[Kafka]
     subgraph Prediction
     B --> C[[Model]]
     end
