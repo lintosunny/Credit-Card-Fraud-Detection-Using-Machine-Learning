@@ -47,7 +47,10 @@ flowchart TD
     D --> E["`EDA
     _Jupyter lab_`"]
     D --> F["`Model Training
-    _Scikit-Learn_`"]
+    _PySpark MLlib_`"]
+    L(Data) --> F
+    L --> K["`Visualization
+    _Power BI_`"]
     F --> G["`Model Evaluation
     _Custom Scripts_`"]
     G --> H["`Model Registry
@@ -56,8 +59,7 @@ flowchart TD
     _Docker, Airflow, Azure, Kubernetes_`"]
     I --> J["`Monitoring & Logging
     _Grafana, Prometheus_`"]
-    J --> K["`Visualization
-    _Power BI_`"]
+    
 ```
 
 
