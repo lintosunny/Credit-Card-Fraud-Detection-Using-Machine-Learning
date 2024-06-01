@@ -12,11 +12,13 @@ This project tackles this challenge head-on by building a machine learning solut
 flowchart LR
     A[(Transactions)] --> B[[model]]
     B --> C{Fraud Score}
-    C -- >= threshold --> D[Analyst]
+    C -- >= threshold --> D[Human Review Interface]
     C -- < threshold --> E[End]
     D -- check --> F((Feedback))
     F --> B
 ```
+<be>Human Review Interface: Develop an interface where humans can review flagged transactions and provide feedback.
+<be>Feedback Loop: Store the verified feedback for retraining the model.
 
 ## Architecture Overview ## High-Level Design (HLD)
 1. **API Gateway**: Entry point for all client requests.
@@ -107,6 +109,7 @@ flowchart TD
 
 - **Dockerization**: Create Docker images for model services.
 - **CI/CD Pipelines**: Set up CircleCI pipelines for continuous deployment to Azure.
+- **Airflow**: Schedule training pipeline weekly
 
 ### Monitoring and Logging Service
 
