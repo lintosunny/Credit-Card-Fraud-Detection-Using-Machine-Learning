@@ -20,6 +20,29 @@ flowchart LR
 <be>Human Review Interface: Develop an interface where humans can review flagged transactions and provide feedback.
 <be>Feedback Loop: Store the verified feedback for retraining the model.
 
+
+## ML model
+```mermaid
+A[(MongoDB)] --> B[Kafka]
+flowchart LR
+    subgraph Prediction
+    B --> C[[Model]]
+    end
+    C --> D[Human Interface]
+    subgraph Training
+    D --> E[(Blob Storage)]
+    E -- Airflow --> F[Data Ingestion]
+    F --> G[Data Validation]
+    G --> H[Data Preprocessing]
+    H --> I[Model Trainer]
+    I --> J[Model Evaluation]
+    J --> K[Model Pusher]
+    end
+    K --> C    
+    E --> Z[Power BI]
+```
+
+
 ## Architecture Overview ## High-Level Design (HLD)
 1. **API Gateway**: Entry point for all client requests.
 2. **Data Ingestion Service**: Handles data ingestion using Kafka.
