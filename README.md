@@ -28,7 +28,6 @@ flowchart LR
     subgraph Prediction
     B --> C[[Model]]
     end
-    C --> D[Human Interface]
     subgraph Training
     D --> E[(Blob Storage)]
     E -- Airflow --> F[Data Ingestion]
@@ -38,6 +37,7 @@ flowchart LR
     I --> J[Model Evaluation]
     J --> K[Model Pusher]
     end
+    C --> D[Human Interface]
     K --> C    
     E --> Z[Power BI]
 ```
