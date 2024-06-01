@@ -23,14 +23,14 @@ flowchart LR
 
 ## ML model
 ```mermaid
-flowchart TB
+flowchart LR
     A[(MongoDB)] --> B[Kafka]
     D --> E[(Blob Storage)]
     subgraph Prediction
     B --> C[[Model]]
     end
     subgraph Training
-    F --> G[Data Validation]
+    F[Data Ingestion] --> G[Data Validation]
     G --> H[Data Preprocessing]
     H --> I[Model Trainer]
     I --> J[Model Evaluation]
