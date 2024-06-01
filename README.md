@@ -39,7 +39,7 @@ flowchart TB
     subgraph Human Interface
     C --> D[Analyst]
     end
-    E -- Airflow --> subgraph
+    E -- Airflow --> Training
     K --> C
     E --> Z[Power BI]
 ```
