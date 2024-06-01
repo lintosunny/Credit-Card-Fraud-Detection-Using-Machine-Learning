@@ -36,12 +36,10 @@ flowchart LR
     I --> J[Model Evaluation]
     J --> K[Model Pusher]
     end
-    subgraph Human Interface
-    C --> D[Analyst]
-    end
     E -- Airflow --> Training
     K --> C
     E --> Z[Power BI]
+    Prediction --> D[Human Interface]
 ```
 
 
