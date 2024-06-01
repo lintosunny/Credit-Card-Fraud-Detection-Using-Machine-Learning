@@ -39,7 +39,8 @@ flowchart LR
     end
     subgraph Human Interface
     C --> D[Human Interface]
-    K --> C    
+    end
+    K --> C
     E --> Z[Power BI]
 ```
 
