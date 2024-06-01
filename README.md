@@ -25,10 +25,10 @@ flowchart LR
 ```mermaid
 flowchart LR
     A[(MongoDB)] --> B[Kafka]
+    D --> E[(Blob Storage)]
     subgraph Prediction
     B --> C[[Model]]
     end
-    D --> E[(Blob Storage)]
     subgraph Training
     E -- Airflow --> F[Data Ingestion]
     F --> G[Data Validation]
@@ -38,7 +38,7 @@ flowchart LR
     J --> K[Model Pusher]
     end
     subgraph Human Interface
-    C --> D[Human Interface]
+    C --> D[Analyst]
     end
     K --> C
     E --> Z[Power BI]
