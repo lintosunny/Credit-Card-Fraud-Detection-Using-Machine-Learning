@@ -53,7 +53,7 @@ flowchart TD
     G --> H["`Model Registry
     _MLFlow_`"]
     H --> I["`Model Deployment
-    _Docker, BentoML, Azure, Kubernetes_`"]
+    _Docker, Airflow, Azure, Kubernetes_`"]
     I --> J["`Monitoring & Logging
     _Grafana, Prometheus_`"]
     J --> K["`Visualization
