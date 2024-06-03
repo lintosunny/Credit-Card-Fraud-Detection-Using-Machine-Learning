@@ -208,7 +208,11 @@ Fraud-Detection-Using-Machine-Learning/
 │       |   ├── kafka_connection.py
 │       |   ├── pyspark_manager.py
 │       |   ├── mongo_client.py
+│       |   ├── influxdb_connection.py
 │       |   ├── ...
+|       |
+│       ├── streaming/
+│       |   ├── kafka_stream_processor.py
 |       |           
 │       ├── constant/
 │       |   ├── database/
@@ -224,6 +228,14 @@ Fraud-Detection-Using-Machine-Learning/
 │       |  
 │       ├── utils/
 │       |   ├── utils.py
+│       |  
+│       ├── scripts/
+│       |   ├── kafka_producer.py
+│       |   ├── kafka_consumer.py
+│       |   ├── retraining_pipeline.py
+│       |  
+│       ├── api/
+│       |   ├── fastapi_service.py
 │       |  
 │       ├── app.py
 │       ├── exception.py
