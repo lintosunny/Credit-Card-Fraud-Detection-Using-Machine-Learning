@@ -1,4 +1,26 @@
 # Credit Card Fraud Detection Using Machine Learning
+
+## ideas
+### Detailed Architecture
+1. Data Ingestion (Kafka): Banks send data to Kafka topics.
+2. Stream Processing (Kafka Streams): Process the data stream in real-time.
+3. Prediction Service (FastAPI): Use a FastAPI-based microservice to make predictions.
+4. Database: Store raw data, predictions, and human-verified data.
+5. Human Verification Interface: Web interface for reviewing and verifying predictions.
+6. Retraining Pipeline: Weekly retraining of the model using the verified data
+
+### Enhanced Architecture
+1. Data Ingestion: Banks send data to Kafka for real-time processing.
+2. Stream Processing: Use Kafka Streams or a similar framework for real-time data processing, feature engineering, and initial predictions.
+3. Automated Feature Engineering: Incorporate automated feature engineering techniques.
+4. Prediction Service: FastAPI-based microservice for handling predictions, including explainability features and model monitoring.
+5. Database: InfluxDB for real-time data storage and MongoDB for predictions, verified data, and historical storage.
+6. Feedback Loop: Implement a feedback loop where validated predictions are used to update the model periodically.
+7. Advanced Analytics: Explore additional analytics techniques (e.g., anomaly detection) to complement fraud detection.
+8. Security Measures: Include robust security measures throughout the pipeline, ensuring data privacy and integrity.
+
+### 
+## Intro
 Alarming statistics reveal a surge in digital fraud! 
 <br>
 <br>
