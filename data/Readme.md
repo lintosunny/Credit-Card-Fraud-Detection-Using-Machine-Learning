@@ -32,9 +32,5 @@ Following is column names and their detailed description
 | isFraud        |  This is the transactions made by the fraudulent agents inside the simulation. In this specific dataset the fraudulent behavior of the agents aims to profit by taking control or customers accounts and try to empty the funds by transferring to another account and then cashing out of the system. |
 | isFlaggedFraud |  The business model aims to control massive transfers from one account to another and flags illegal attempts. An illegal attempt in this dataset is an attempt to transfer more than 200.000 in a single transaction.                                                                                  |
 
-
 ## Dataset link
-```
-https://www.kaggle.com/datasets/ealaxi/paysim1
-```
 https://www.kaggle.com/datasets/ealaxi/paysim1
