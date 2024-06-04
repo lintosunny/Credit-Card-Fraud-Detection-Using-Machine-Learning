@@ -1,1 +1,4 @@
+jupyterlab
+ipykernel
+pandas
 -e .
