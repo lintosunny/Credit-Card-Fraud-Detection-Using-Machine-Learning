@@ -1,2 +1,2 @@
-#DATABASE_NAME = "___"
-#COLLECTION_NAME = "___"
+DATABASE_NAME = "fraud_detection"
+COLLECTION_NAME = "transactions"
