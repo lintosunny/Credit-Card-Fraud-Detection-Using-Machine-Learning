@@ -1,15 +1,14 @@
 import sys
 from typing import Optional
-
 import numpy as np
 import pandas as pd
 import json
-from sensor.configuration.mongo_db_connection import MongoDBClient
-from sensor.constant.database import DATABASE_NAME
-from sensor.exception import SensorException
+from fraud_detection.configuration.mongo_db_connection import MongoDBClient
+from fraud_detection.constant.database import DATABASE_NAME
+from fraud_detection.exception import FraudException
 
 
-class SensorData:
+class TransactionData:
     """
     This class help to export entire mongo db record as pandas dataframe
     """
@@ -20,7 +19,7 @@ class SensorData:
             self.mongo_client = MongoDBClient(database_name=DATABASE_NAME)
 
         except Exception as e:
-            raise SensorException(e, sys)
+            raise FraudException(e, sys)
 
 
     def save_csv_file(self,file_path ,collection_name: str, database_name: Optional[str] = None):
@@ -35,7 +34,7 @@ class SensorData:
             collection.insert_many(records)
             return len(records)
         except Exception as e:
-            raise SensorException(e, sys)
+            raise FraudException(e, sys)
 
 
     def export_collection_as_dataframe(
@@ -59,4 +58,4 @@ class SensorData:
             return df
 
         except Exception as e:
-            raise SensorException(e, sys)
+            raise FraudException(e, sys)
