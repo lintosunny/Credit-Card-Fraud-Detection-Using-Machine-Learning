@@ -1,6 +1,6 @@
 import pymongo
-from sensor.constant.database import DATABASE_NAME
-from sensor.constant.env_variable import MONGODB_URL_KEY
+from fraud_detection.constant.database import DATABASE_NAME
+from fraud_detection.constant.env_variable import MONGODB_URL_KEY
 import certifi
 import os
 ca = certifi.where()
