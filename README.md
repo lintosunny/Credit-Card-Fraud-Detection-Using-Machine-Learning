@@ -115,7 +115,7 @@ flowchart TD
 ### API Gateway
 
 - **Endpoints**: Define REST endpoints for data submission, model predictions.
-- **Security**: Implement JWT for authentication, API rate limiting policies.
+- **Security**: Implement JWT for authentication, API rate limiting policies
 
 ### Data Ingestion Service
 
