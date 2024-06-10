@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection Using Machine Learning
 
-## ideas
+## idea
 ### Detailed Architecture
 1. Data Ingestion (Kafka): Banks send data to Kafka topics.
 2. Stream Processing (Kafka Streams): Process the data stream in real-time.
